@@ -18,19 +18,19 @@
     "author": "Raul Ascencio",
     "license": "MIT",
     "dependencies": {
-        "query-string": "~5.1.1",
-        "react": "^16.3.2",
-        "react-admin": "^2.0.0-beta4",
-        "react-dom": "^16.3.2"
+        "query-string": "~7.0.1",
+        "react": "^17.0.2",
+        "react-admin": "^3.19.0",
+        "react-dom": "^17.0.2"
     },
     "devDependencies": {
         "babel": "^6.23.0",
         "babel-cli": "^6.26.0",
-        "babel-jest": "^22.4.3",
+        "babel-jest": "^27.2.5",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-register": "^6.26.0",
-        "fetch-mock": "^6.3.0",
-        "jest": "^22.4.3",
-        "whatwg-fetch": "^2.0.4"
+        "fetch-mock": "^9.11.0",
+        "jest": "^27.2.5",
+        "whatwg-fetch": "^3.6.2"
     }
 }
