@@ -3413,7 +3413,7 @@
     "kind-of" "^6.0.0"
     "math-random" "^1.0.1"
 
-"react-admin@^2.0.0-beta4":
+"react-admin@^2.9.9":
   "integrity" "sha512-/vusrTQg07+RXTfgB07n8lBFAJAqAye69QF1mvox9vINEMsnrT1cavGoXCqD9aiQtW3dEAXU/f7SQ3DfxCHhxw=="
   "resolved" "https://registry.npmjs.org/react-admin/-/react-admin-2.9.9.tgz"
   "version" "2.9.9"
@@ -3440,7 +3440,7 @@
     "react-themeable" "^1.1.0"
     "section-iterator" "^2.0.0"
 
-"react-dom@^16.3.0", "react-dom@^16.3.2", "react-dom@>=15.0.0":
+"react-dom@^16.14.0", "react-dom@^16.3.0", "react-dom@>=15.0.0":
   "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
   "version" "16.14.0"
@@ -3560,7 +3560,7 @@
     "prop-types" "^15.6.2"
     "react-lifecycles-compat" "^3.0.4"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^15.0.0-0 || ^16.0.0-0", "react@^16.14.0", "react@^16.3.0", "react@^16.3.2", "react@>=0.13", "react@>=0.14.0", "react@>=0.14.7", "react@>=0.15", "react@>=15", "react@>=15.0.0":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^15.0.0-0 || ^16.0.0-0", "react@^16.14.0", "react@^16.3.0", "react@>=0.13", "react@>=0.14.0", "react@>=0.14.7", "react@>=0.15", "react@>=15", "react@>=15.0.0":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
