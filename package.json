@@ -15,7 +15,7 @@
         "hal",
         "ra-data"
     ],
-    "author": "Raul Ascencio",
+    "author": "Raul Ascencio, Michał Mosiewicz",
     "license": "MIT",
     "dependencies": {
         "query-string": "~5.1.1",
