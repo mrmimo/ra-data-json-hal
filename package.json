@@ -3,11 +3,15 @@
     "version": "1.0.7",
     "description": "Simple JSON+HAL Adapter for react-admin",
     "main": "lib/index.js",
+    "watch": {
+        "build": "src/*.js"
+    },
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
-        "build": "babel lib --out-dir out",
-        "prepublish": "npm run test && npm run build"
+        "build": "babel -s inline -d lib src",
+        "prepublish": "npm run build",
+        "watch": "npm-watch"
     },
     "keywords": [
         "react-admin",
@@ -24,13 +28,13 @@
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "babel": "^6.23.0",
         "babel-cli": "^6.26.0",
         "babel-jest": "^27.2.5",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-register": "^6.26.0",
         "fetch-mock": "^9.11.0",
         "jest": "^27.2.5",
+        "npm-watch": "^0.11.0",
         "whatwg-fetch": "^3.6.2"
     }
 }
