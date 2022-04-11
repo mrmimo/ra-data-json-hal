@@ -11,10 +11,6 @@ exports.extractIDFromResourceSelfLink = extractIDFromResourceSelfLink;
 
 var _reactAdmin = require('react-admin');
 
-var _HttpError = require('ra-core/lib/util/HttpError');
-
-var _HttpError2 = _interopRequireDefault(_HttpError);
-
 var _queryString = require('query-string');
 
 var _constants = require('./constants');
@@ -52,7 +48,7 @@ var handlingResponse = function handlingResponse(_ref, resource, type) {
     // not json, no big deal
   }
   if (status < 200 || status >= 300) {
-    return Promise.reject(new _HttpError2.default(json && json.message || statusText, status, json));
+    return Promise.reject(new Error(json && json.message || statusText + "," + status + "," +  json));
   }
   switch (type) {
     case _reactAdmin.GET_ONE:
