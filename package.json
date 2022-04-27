@@ -1,4 +1,4 @@
-{
+  {
     "name": "ra-data-json-hal",
     "version": "1.0.8",
     "description": "Simple JSON+HAL Adapter for react-admin",

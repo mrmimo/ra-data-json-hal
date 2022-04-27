@@ -22,10 +22,12 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function extractIDFromResourceSelfLink(selfLink) {
+  //console.log("Extracting ID from Resource", selfLink);
   return selfLink.match(/[\w\-]+$/)[0];
 }
 
 function setSelfHrefAsID(resource) {
+  //console.log("Setting href as id", resource);
   return _extends({}, resource, {
     id: extractIDFromResourceSelfLink(resource[_constants.LINKS_KEY].self.href)
   });

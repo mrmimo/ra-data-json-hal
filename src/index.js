@@ -106,7 +106,7 @@ function convertHttpDataProviderRequestToHttpRequest(apiUrl, httpClient, type, r
         }
       };
     case _reactAdmin.UPDATE:
-      console.log(params.data)
+      //console.log(params.data)
       return {
         url: baseRequestUrl + '/' + params.id,
         options: {
@@ -257,7 +257,6 @@ function deleteMany(apiUrl, httpClient, resource, params) {
 
 exports.default = function (apiUrl) {
   var httpClient = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _fetch.fetchJson;
-  Console.log("dupa")
   /**
    * @example
    * jsonHalDataProvider(GET_ONE, "countries", { code: 'SV' })
@@ -278,8 +277,8 @@ exports.default = function (apiUrl) {
       return deleteMany(apiUrl, httpClient, resource, params);
     }
 
-    var _convertHttpDataProvi = convertHttpDataProviderRequestToHttpRequest(apiUrl, httpClient, type, resource, params),
-        url = _convertHttpDataProvi.url,
+    var _convertHttpDataProvi = convertHttpDataProviderRequestToHttpRequest(apiUrl, httpClient, type, resource, params);
+    var url = _convertHttpDataProvi.url,
         options = _convertHttpDataProvi.options;
 
     return httpClient(url, options, resource, type).then(function (response) {
