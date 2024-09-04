@@ -213,8 +213,8 @@ function getMany(apiUrl, httpClient, resource, params) {
  */
 function updateMany(apiUrl, httpClient, resource, params) {
   return requestMany(apiUrl, httpClient, resource, params, {
-    method: 'PUT',
-    body: params.data
+    method: 'PATCH',
+    body: JSON.stringify(params.data),
   }, function (responses) {
     return {
       data: responses.map(function (response) {
