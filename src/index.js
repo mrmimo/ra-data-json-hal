@@ -212,7 +212,34 @@ function getMany(apiUrl, httpClient, resource, params) {
  * @return {promise}
  */
 function updateMany(apiUrl, httpClient, resource, params) {
-  return requestMany(apiUrl, httpClient, resource, params, {
+   console.log("updateMany", params);
+   if (Array.isArray(params.ids)) {
+    return Promise.all(params.ids.map(function (url) {
+      return httpClient(apiUrl + '/' + resource + '/' + url).then(function (response) {
+        return {
+          data: _extends(response.json, params.data),
+          id: url
+        };
+      }).then(function (_ref) {
+        var data = _ref.data,
+            id = _ref.id;
+        return httpClient(apiUrl + '/' + resource + '/' + id, {
+          method: 'PATCH',
+          body: JSON.stringify(data)
+        });
+      });
+    })).then(function (responses) {
+      return {
+        data: responses.map(function (_ref) {
+          var json = _ref.json;
+          return _extends({}, json, {
+            id: (0, _fetch.extractIDFromResourceSelfLink)(json[_constants.LINKS_KEY].self.href)
+          });
+        })
+      };
+    });
+  }
+  /* return requestMany(apiUrl, httpClient, resource, params, {
     method: 'PATCH',
     body: JSON.stringify(params.data),
   }, function (responses) {
@@ -222,6 +249,19 @@ function updateMany(apiUrl, httpClient, resource, params) {
           id: (0, _fetch.extractIDFromResourceSelfLink)(response.headers.get(_constants.LOCATION_HEADER))
         }, params.data);
       })
+    };
+  });*/
+}
+
+function fetchAndUpdateOne(apiUrl, httpClient, resource, params) {
+  return httpClient(apiUrl + '/' + resource + '/' + params.id, {
+    method: 'PATCH',
+    body: JSON.stringify(params.data)
+  }).then(function (response) {
+    return {
+      data: _extends({
+        id: (0, _fetch.extractIDFromResourceSelfLink)(response.headers.get(_constants.LOCATION_HEADER))
+      }, params.data)
     };
   });
 }

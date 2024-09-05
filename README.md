@@ -19,7 +19,7 @@ This Data Provider fits REST APIs using simple GET parameters for filters and so
 | `GET_LIST`           | `GET http://example.com/api/posts?name.dir=DESC&page=1&published=true&size=10&sort=name`
 | `GET_ONE`            | `GET http://example.com/api/posts/50`
 | `CREATE`             | `POST http://example.com/api/posts`
-| `UPDATE`             | `PUT http://example.com/api/posts/50`
+| `UPDATE`             | `PATCH http://example.com/api/posts/50`
 | `DELETE`             | `DELETE http://example.com/api/posts/50`
 | `GET_MANY`           | Makes a GET_ONE for each `id` request.
 | `GET_MANY_REFERENCE` | `GET http://example.com/api/posts/50/comments`

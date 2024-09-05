@@ -1,8 +1,10 @@
 {
     "name": "ra-data-json-hal",
     "version": "1.0.11",
-    "description": "Simple JSON+HAL Adapter for react-admin",
     "main": "lib/index.js",
+    "description": "Simple JSON+HAL Adapter for react-admin",
+    "author": "Raul Ascencio, Michal Mosiewicz",
+    "license": "MIT",
     "watch": {
         "build": "src/*.js"
     },
@@ -11,7 +13,7 @@
         "test:watch": "jest --watch",
         "build": "babel -s inline -d lib src",
         "prepublish": "npm run build",
-        "watch": "npm-watch"
+        "watch": "npm-watch build"
     },
     "keywords": [
         "react-admin",
@@ -19,13 +21,11 @@
         "hal",
         "ra-data"
     ],
-    "author": "Raul Ascencio, Michał Mosiewicz",
-    "license": "MIT",
     "dependencies": {
         "query-string": "~7.0.1",
         "ra-data-json-hal": "file:",
         "react": ">=17.0.0",
-        "react-admin": ">=3.19.0",
+        "react-admin": ">=4.2.0",
         "react-dom": ">=17.0.0"
     },
     "devDependencies": {
