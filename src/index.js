@@ -110,7 +110,7 @@ function convertHttpDataProviderRequestToHttpRequest(apiUrl, httpClient, type, r
       return {
         url: baseRequestUrl + '/' + params.id,
         options: {
-          method: 'PUT',
+          method: 'PATCH',
           body: JSON.stringify(fixIdsToURIs(params.data))
         }
       };
