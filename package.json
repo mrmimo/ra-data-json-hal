@@ -22,7 +22,6 @@
     ],
     "dependencies": {
         "query-string": ">=7.0.1",
-        "ra-data-json-hal": "file:",
         "react": ">=18.3.1",
         "react-admin": ">=4.2.0",
         "react-dom": ">=18.3.1"
