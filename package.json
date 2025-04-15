@@ -21,8 +21,7 @@
         "ra-data"
     ],
     "dependencies": {
-        "query-string": ">=7.0.1",
-        "ra-data-json-hal": "file:"
+        "query-string": ">=7.0.1"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
