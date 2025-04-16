@@ -1193,7 +1193,7 @@ query-string@>=7.0.1:
     split-on-first "^3.0.0"
 
 "ra-data-json-hal@file:":
-  version "1.0.13"
+  version "1.0.14"
   resolved "file:"
   dependencies:
     query-string ">=7.0.1"
