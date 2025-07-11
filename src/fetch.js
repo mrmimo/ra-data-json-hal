@@ -11,7 +11,7 @@ exports.extractIDFromResourceSelfLink = extractIDFromResourceSelfLink;
 
 var _reactAdmin = require('react-admin');
 
-var _queryString = require('query-string').default;
+var { stringify } = require('query-string');
 
 var _constants = require('./constants');
 
@@ -118,7 +118,7 @@ var fetchJson = exports.fetchJson = function fetchJson(url) {
   });
 };
 
-var queryParameters = exports.queryParameters = _queryString.stringify;
+var queryParameters = exports.queryParameters = stringify;
 
 var isValidObject = function isValidObject(value) {
   if (!value) {
