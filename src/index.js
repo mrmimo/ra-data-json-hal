@@ -31,9 +31,8 @@ function fixIdsToURIs(data) {
  * @param {object} params
  * @returns {string}
  */
-function getQueryParamsFromReactAdminParams() {
-  var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
+function getQueryParamsFromReactAdminParams(params) {
+  
   if (!params || Object.keys(params).length === 0) {
     return '';
   }
@@ -295,7 +294,7 @@ function deleteMany(apiUrl, httpClient, resource, params) {
  * @return {promise}
  */
 
-exports.default = function (apiUrl) {
+module.exports = function (apiUrl) {
   var httpClient = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _fetch.fetchJson;
   /**
    * @example
@@ -326,5 +325,6 @@ exports.default = function (apiUrl) {
     });
   };
 };
+
 
 function generateHttpClient(url, options) {}

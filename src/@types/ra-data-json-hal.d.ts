@@ -8,5 +8,5 @@ declare module 'ra-data-json-hal' {
     httpClient?: HttpClient
   ) => DataProvider;
 
-  export default jsonHalDataProvider;
+  export = jsonHalDataProvider;
 }

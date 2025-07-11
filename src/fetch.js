@@ -11,7 +11,7 @@ exports.extractIDFromResourceSelfLink = extractIDFromResourceSelfLink;
 
 var _reactAdmin = require('react-admin');
 
-var _queryString = require('query-string');
+var _queryString = require('query-string').default;
 
 var _constants = require('./constants');
 
