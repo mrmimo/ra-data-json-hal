@@ -95,7 +95,7 @@ var fetchJson = exports.fetchJson = function fetchJson(url) {
     requestHeaders.set('Authorization', options.user.token);
   }
 
-  return fetch(url, _extends({}, options, { headers: requestHeaders })).then(function (response) {
+  return fetch(url, _extends({}, options, { headers: requestHeaders, redirect: 'manual' })).then(function (response) {
     var emptyStatusCodes = [204];
     if (emptyStatusCodes.includes(response.status)) {
       return {
